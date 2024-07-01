@@ -1,20 +1,20 @@
 'use strict';
 
-// element toggle function
+// Element toggle function
 const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
 }
 
-// sidebar variables
+// Sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-// sidebar toggle functionality for mobile
+// Sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () {
   elementToggleFunc(sidebar);
 });
 
-// custom select variables
+// Custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
 const selectValue = document.querySelector("[data-select-value]");
@@ -24,7 +24,7 @@ select.addEventListener("click", function () {
   elementToggleFunc(this);
 });
 
-// add event in all select items
+// Add event in all select items
 for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
     let selectedValue = this.innerText.toLowerCase().replace(/ /g, "-");
@@ -34,12 +34,13 @@ for (let i = 0; i < selectItems.length; i++) {
   });
 }
 
-// filter variables
+// Filter variables
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
+// Filter function
 const filterFunc = function (selectedValue) {
   for (let i = 0; i < filterItems.length; i++) {
-    if (selectedValue === "all" || selectedValue === filterItems[i].dataset.category) {
+    if (selectedValue === "all" || filterItems[i].dataset.category.split(' ').includes(selectedValue)) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
@@ -47,7 +48,17 @@ const filterFunc = function (selectedValue) {
   }
 }
 
-// add event in all filter button items for large screen
+// Show all items by default
+document.addEventListener("DOMContentLoaded", function() {
+  // Set default filter to "all"
+  const allButton = Array.from(filterBtn).find(btn => btn.getAttribute('data-filter-btn') === 'all');
+  if (allButton) {
+    allButton.classList.add('active');
+  }
+  filterFunc('all');
+});
+
+// Add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
@@ -62,15 +73,15 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 }
 
-// contact form variables
+// Contact form variables
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input fields
+// Add event to all form input fields
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
-    // check form validation
+    // Check form validation
     if (form.checkValidity()) {
       formBtn.removeAttribute("disabled");
     } else {
@@ -79,11 +90,11 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-// page navigation variables
+// Page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
+// Add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
     for (let j = 0; j < pages.length; j++) {
