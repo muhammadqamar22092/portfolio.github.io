@@ -72,12 +72,6 @@ for (let i = 0; i < filterBtn.length; i++) {
     lastClickedBtn = this;
   });
 }
-
-// Contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
-
 // Add event to all form input fields
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
