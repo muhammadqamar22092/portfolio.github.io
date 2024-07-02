@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
+  <title>vCard - Personal Portfolio</title>
 
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -21,7 +21,7 @@
         </figure>
         <div class="info-content">
           <h2 class="name" title="Muhammad Qamar Abbas">Muhammad Qamar Abbas</h2>
-          <p class="title"> Marketing Analyst | Data-Driven Strategist</p>
+          <p class="title">Marketing Analyst</p>
         </div>
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
@@ -100,6 +100,9 @@
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
           </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
         </ul>
       </nav>
 
@@ -173,9 +176,9 @@
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Institute of Business Administration Karachi (IBA)</h4>
               <span>2020 — 2024</span>
-              <span>CGPA: 3.57</span>
+              <span>CGPA:3.57</span>
               <p class="timeline-text"> Courses: • Digital Marketing, • Analytical Approach to Marketing Decisions, • Introduction to Marketing Analytics 
-              <p class="timeline-text">• Data Manipulation and Visualization • Method in Business Research • Essential Software • Method in Business Research • Marketing Issues in Pakistan • Data Analytics for Economist • GIS and 
+                • Data Manipulation and Visualization • Method in Business Research • Essential Software • Method in Business Research • Marketing Issues in Pakistan • Data Analytics for Economist • GIS and 
                 Mapping for planning, Design, and Development.</p>
             </li>
           </ol>
@@ -192,11 +195,11 @@
               <h4 class="h4 timeline-item-title">Project Trainee </h4>
               <h4 class="h4 timeline-item-title">TCS Pakistan </h4>
               <span>Feb 2024 — May 2024</span>
-              <p class="timeline-text"> •Scrutinized the top 10 national and international competitors of TCS, evaluated portfolios, and ideated 2 new 
+              <p class="timeline-text">• Scrutinized the top 10 national and international competitors of TCS, evaluated portfolios, and ideated 2 new 
                 products/services – on-demand warehousing and reverse logistics – to expand TCS's portfolio.
-               <p class="timeline-text">  • Analyzed existing TCS customer data to understand needs, preferences, and potential demand for reverse logistics and 
+              <p class="timeline-text">• Analyzed existing TCS customer data to understand needs, preferences, and potential demand for reverse logistics and 
                 on-demand warehousing.
-               <p class="timeline-text">  • Leveraged dashboarding and modeling tools to estimate the potential of existing customers to adopt 2 new products.</p>
+              <p class="timeline-text">• Leveraged dashboarding and modeling tools to estimate the potential of existing customers to adopt 2 new products.</p>
             </li>
             <li class="timeline-item">
               <h4 class="h4 timeline-item-title">Content and Copywriter for guest posts and Landing pages </h4>
@@ -221,7 +224,7 @@
               <span>Sep 2023 — November 2023</span>
               <p class="timeline-text">• Formulated a survey on the "Effects of wellness programs on employees' attitudes” and attained an 83% survey
                 response rate, gathering over 250 responses from 300 professional employees.
-                <p class="timeline-text">• Transformed data for analytics by applying one-hot encoding to 10 categorical variables and used SPSS to analyze the
+              <p class="timeline-text">• Transformed data for analytics by applying one-hot encoding to 10 categorical variables and used SPSS to analyze the
                 data.</p>
             </li>
             <li class="timeline-item">
@@ -231,9 +234,9 @@
               <p class="timeline-text">• Collaborated with other 5 team members to identify market touchpoints and competitor activities in lubricant categories 
                 (PCMO, DEO, and MCO) by visiting over 42 shops in the High Street Market, yielding insights for future marketing 
                 strategies.
-                <p class="timeline-text">• Conducted in-depth interviews with 42 retailers and 60 customers to gather data for strategic price adjustments and 
+              <p class="timeline-text">• Conducted in-depth interviews with 42 retailers and 60 customers to gather data for strategic price adjustments and 
                 incentive schemes across the Lubricant categories (PCMO, MCO, and DEO).
-                <p class="timeline-text">• Employed Power BI to transform survey data from 42 shops into a visually impactful dashboard; facilitated data-driven 
+              <p class="timeline-text">• Employed Power BI to transform survey data from 42 shops into a visually impactful dashboard; facilitated data-driven 
                 decision-making.</p>
               </li>
               <li class="timeline-item">
@@ -748,6 +751,30 @@
               </a>
             </li>
           </ul>
+        </section>
+      </article>
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7245.781682301124!2d67.0170349736635!3d24.860734221462075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e6c2fc7ec2f%3A0xc24b2d3b9b14b80!2sKarachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1648082216448!5m2!1sen!2s" width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
         </section>
       </article>
     </div>
