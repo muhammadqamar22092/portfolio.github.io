@@ -106,8 +106,8 @@ body {
 article {
   background: var(--eerie-black-2);
   border: 1px solid var(--jet);
-  border-radius: 18px;
-  padding: 30px;
+  border-radius: 20px;
+  padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
@@ -232,8 +232,8 @@ article.active {
 main {
   margin: 15px 12px;
   margin-bottom: 75px;
-  padding-top: 60px; /* Adjust this based on the actual height of your navbar */
   min-width: 259px;
+  padding-top: 60px; /* Add this line to push the content below the navbar */
 }
 /*-----------------------------------*\
   #SIDEBAR
@@ -388,7 +388,7 @@ main {
 .navbar-link {
   color: var(--light-gray);
   font-size: var(--fs-8);
-  padding: 10px 0px;
+  padding: 20px 7px;
   transition: color var(--transition-1);
 }
 .navbar-link:hover,
@@ -706,30 +706,8 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
-/* Add the styles for the new Certifications and Skills sections */
-
 /*-----------------------------------*\
-  #Certifications
-\*-----------------------------------*/
-.certifications {
-  display: none;
-}
-.certifications.active {
-  display: block;
-  animation: fade 0.5s ease backwards;
-}
-/*-----------------------------------*\
-  #Skills
-\*-----------------------------------*/
-.skills {
-  display: none;
-}
-.skills.active {
-  display: block;
-  animation: fade 0.5s ease backwards;
-}
-/*-----------------------------------*\
-  #ARTICLES
+  #BLOG
 \*-----------------------------------*/
 .blog-posts {
   margin-bottom: 10px;
@@ -1264,4 +1242,28 @@ textarea.form-input::-webkit-resizer {
   .timeline-text {
     max-width: 700px;
   }
+  /*-----------------------------------*\
+  #RESPONSIVE
+\*-----------------------------------*/
+/**
+ * responsive larger than 450px screen
+ */
+@media (min-width: 450px) {
+  /* #PORTFOLIO, BLOG */
+  .project-img,
+  .blog-banner-box {
+    height: auto;
+  }
+}
+
+/* Add the margin to the certifications section */
+.skills {
+  margin-top: 30px; /* Adjust this value to create the desired space */
+}
+
+/* Change the text color of the certification descriptions to light gray */
+.certification-title {
+  color: var(--light-gray);
+}
+
 }
