@@ -1246,9 +1246,9 @@ textarea.form-input::-webkit-resizer {
   #RESPONSIVE
 \*-----------------------------------*/
 /**
- * responsive larger than 350px screen
+ * responsive larger than 250px screen
  */
-@media (min-width: 350px) {
+@media (min-width: 250px) {
   /* #PORTFOLIO, BLOG */
   .project-img,
   .blog-banner-box {
