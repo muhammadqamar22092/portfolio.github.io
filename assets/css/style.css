@@ -1363,9 +1363,7 @@ textarea.form-input::-webkit-resizer {
 .certification-title {
   color: var(--light-gray);
 }
-  /*-----------------------------------*\
-  #VISITOR COUNTER
-\*-----------------------------------*/
+  /* Visitor Counter Styles */
 .visitor-counter {
   position: relative;
   background: var(--border-gradient-onyx);
@@ -1438,7 +1436,6 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
-/* Add this to your existing responsive larger than 768px screen media query */
 @media (min-width: 768px) {
   .counter-display {
     flex-direction: row;
